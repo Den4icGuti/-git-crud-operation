@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "name": "-git-crud-operation",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel  src/*.html",
+    "build": "parcel build src/*.html",
+    "server":"json-server --watch db.json -p 3000 -d 300"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Den4icGuti/-git-crud-operation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Den4icGuti/-git-crud-operation/issues"
+  },
+  "homepage": "https://github.com/Den4icGuti/-git-crud-operation#readme"
+}
