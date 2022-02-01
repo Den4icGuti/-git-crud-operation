@@ -17,18 +17,28 @@ const newUSer = {
     body: JSON.stringify(user),
   };
   //====Делаем запрос на создание нового ресурса====//
-  return  fetch(`${URL}/users`, option)
-  .then(r => r.json())
-  .then(console.log);
+  return  fetch(`${URL}/users `, option)
+    .then(r => r.json())
+    
 }
 
-createNewUser(newUSer);
+createNewUser(newUSer)
+  .then(onRerenderInfoUser)
+  .catch(error => console.log(error));
 
 createNewUser({
   name: 'Lion',
   lastName: 'Kennadi',
   placeWork: 'R.D.P',
   city:'Racoon-City'
-})
+}).then(onRerenderInfoUser)
+  .catch(error => console.log(error))
+
+//===Рендерим инвормацию пользователя на экран монитора====////
+
+function onRerenderInfoUser(user) {
+  console.log('Пришел ответ от back-end')
+  console.log(user);
+}
   
 
